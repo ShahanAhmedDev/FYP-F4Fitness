@@ -16,11 +16,11 @@ class HistoryPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final  list = ref.watch(historyListProvider);
     final lists = list.value?.exerciseList;
-    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             Text("Welcome"),
+          return Scaffold(
             Text("this is history page"),
             ListView.builder(
               shrinkWrap: true,
