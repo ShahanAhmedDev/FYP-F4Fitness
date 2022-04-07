@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class ExeciseComponentRow extends StatelessWidget {
-
   int sets;
   int reps;
   String exercise;

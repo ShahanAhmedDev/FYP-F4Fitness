@@ -1,12 +1,15 @@
 // import 'package:f_4_fitness/Train_Section/fab_Intermidiate_model.dart';
 // import 'package:f_4_fitness/Train_Section/fab_beginner_model.dart';
 
-import 'package:f_4_fitness/constants/providers/exercise_history.dart';
+
+import 'package:f_4_fitness/Views/Train_Section/ExerciseTemplates/exerciseComponentRow.dart';
 import 'package:f_4_fitness/model/variable%20declaration.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../constants/providers/providers.dart';
+import '../../providers/providers.dart';
+
+
 class HistoryPage extends HookConsumerWidget {
  // final BeginnersModel beginnersModel;
 
@@ -14,25 +17,51 @@ class HistoryPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final  list = ref.watch(historyListProvider);
-    final lists = list.value?.exerciseList;
-      body: SafeArea(
+    final ExerciseTemplateList = ref.watch(exerciseCardProvider).value?.list;
+    // final lists = list.value?.list;
+    return Scaffold(
+    body: SafeArea(
         child: Column(
           children: [
             Text("Welcome"),
-          return Scaffold(
-            Text("this is history page"),
-            ListView.builder(
-              shrinkWrap: true,
-                itemCount:  lists?.length,
-                itemBuilder: (BuildContext context, int index)
-                {
+
+            // Text("this is history page"),
+            ListView.separated(
+
+                shrinkWrap: true,
+                itemCount: ExerciseTemplateList!.length,
+                separatorBuilder: (BuildContext context,int index) => Spacer(),
+                itemBuilder: (BuildContext context, int index) {
                   return
-              ListTile(
-                title: Text(lists![index].name),
-                subtitle: Text(lists[index].Subtitle),
-              );
-            })
+                    Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                            children: [
+                              Text(ExerciseTemplateList[index].exerciseTemplateName),
+                              Column(
+                                  children:[
+                                    ... ExerciseTemplateList[index].listExercise
+                                  ]
+                              ),
+                            ]
+                        ),
+                      ),
+                    );
+                  // ExerciseCard(exerciseTemplateName: ExerciseTemplateList[0].exerciseTemplateName, listExercise:  ExerciseTemplateList[0].listExercise);
+                }
+
+              //   ExeciseComponentRow(
+              //   exercise: ExerciseTemplateList[index].exercise,
+              //   sets: ExerciseTemplateList[index].sets,
+              //   reps: ExerciseTemplateList[index].reps,
+              // )
+
+
+              // ... ExerciseTemplateList,
+              // TextButton(onPressed: (){}, child: Text('Add to history'),),
+
+            )
             // Text(beginnersModel.bex1),
             // Text(beginnersModel.bex2),
             // Text(beginnersModel.bex3),

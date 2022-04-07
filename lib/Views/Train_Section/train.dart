@@ -1,8 +1,9 @@
 // import 'package:f_4_fitness/Train_Section/int_beg_adv_detailpage.dart';
+import 'package:f_4_fitness/providers/LifterType.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/providers/LifterType.dart';
+
 import 'ExerciseTemplates/exerciseComponentRow.dart';
 import 'ExerciseTemplates/exerciseTemplateWidget.dart';
 // import 'package:f_4_fitness/Train_Section/fab_variables.dart';
