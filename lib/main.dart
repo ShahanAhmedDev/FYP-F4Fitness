@@ -9,6 +9,7 @@ import 'Views/UserPage/user_page.dart';
 
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp( ProviderScope(child: MyApp()));
 
 }
@@ -39,7 +40,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  int currentIndex = 4;
+  int currentIndex = 1;
   setBottomBarIndex(index) {
     setState(() {
       currentIndex = index;
