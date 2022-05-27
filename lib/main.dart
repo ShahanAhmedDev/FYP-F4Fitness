@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'Views/Excercise/excercise_page.dart';
 import 'Views/History/history_page.dart';
+import 'Views/Train_Section/TemplateCreation/CreateExerciseTemplate.dart';
 import 'Views/Train_Section/train.dart';
 import 'Views/UserPage/user_page.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'F4Fitness Prototype',),
+      // home: ExerciseTemplateCreation(),
       debugShowCheckedModeBanner: false,
     );
   }

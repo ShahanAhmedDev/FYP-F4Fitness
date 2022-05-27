@@ -1,6 +1,7 @@
 import 'package:f_4_fitness/Views/Train_Section/ExerciseTemplates/exerciseComponentRow.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:uuid/uuid.dart';
 
 // class ExerciseList extends ChangeNotifier {
 //   List<ExerciseCard> list = [
@@ -33,28 +34,34 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 // }
 
 class ExerciseListNotifier extends StateNotifier<List<ExerciseCard>> {
+   var _uuid = Uuid();
 
   ExerciseListNotifier() : super([]);
 
-  void addExerciseCard(ExerciseCard card){
-    state = [... state, card];
+  addExerciseCard(ExerciseCard card){
+     state = [... state, ExerciseCard(id: _uuid.v4(),exerciseTemplateName: card.exerciseTemplateName, listExercise: card.listExercise)];
+     state =state;
   }
 
-  void removeExerciseCard(ExerciseCard card){
+   removeExerciseCard(ExerciseCard card){
     state =
-    [  for (final oldCard in state)
+    [ for (final oldCard in state)
       if(oldCard.exerciseTemplateName != card.exerciseTemplateName) card,
     ];
   }
 
 
   List<ExerciseCard> state = [
-    ExerciseCard(exerciseTemplateName: 'Strong 5 x 5', listExercise: [
+    ExerciseCard
+      (id: 'Todo-1',
+      exerciseTemplateName: 'Strong 3 x 3', listExercise: [
       ExeciseComponentRow(sets: 5, reps: 5, exercise: 'Squat',),
       ExeciseComponentRow(sets: 5, reps: 5, exercise: 'Bench',),
       ExeciseComponentRow(sets: 5, reps: 5, exercise: 'Bent Over Row',),
     ],),
-    ExerciseCard(exerciseTemplateName: 'Strong 5 x 5', listExercise: [
+    ExerciseCard(
+      id: 'Todo-2',
+      exerciseTemplateName: 'Strong 5 x 5', listExercise: [
       ExeciseComponentRow(sets: 5, reps: 5, exercise: 'Squat',),
       ExeciseComponentRow(sets: 5, reps: 5, exercise: 'Bench',),
       ExeciseComponentRow(sets: 5, reps: 5, exercise: 'Bent Over Row',),
@@ -67,6 +74,19 @@ class ExerciseListNotifier extends StateNotifier<List<ExerciseCard>> {
     return state.length;
   }
 
+  // void edit({required String id, required String description}) {
+  //   state = [
+  //     for (final todo in state)
+  //       if (todo.id == id)
+  //         Todo(
+  //           id: todo.id,
+  //           completed: todo.completed,
+  //           description: description,
+  //         )
+  //       else
+  //         todo,
+  //   ];
+  // }
 // addNewExercise({ExerciseComponentRow}) {
 //   list.add(ExerciseComponentRow);
 //   notifyListeners();
@@ -79,9 +99,10 @@ class ExerciseListNotifier extends StateNotifier<List<ExerciseCard>> {
 }
 
 class ExerciseCard extends StatelessWidget {
+  String? id;
   String exerciseTemplateName;
   List<ExeciseComponentRow> listExercise;
-  ExerciseCard({required this.exerciseTemplateName,
+  ExerciseCard({this.id,required this.exerciseTemplateName,
     required this.listExercise,}
       );
   @override
@@ -113,6 +134,7 @@ class ExerciseCard extends StatelessWidget {
       ],
     );
   }
+
 }
 
 

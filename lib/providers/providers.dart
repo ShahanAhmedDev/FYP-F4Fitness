@@ -14,3 +14,5 @@ import 'exercise_history.dart';
 final exerciseCardProvider = StateNotifierProvider<ExerciseListNotifier,List<ExerciseCard>>((ref){
   return ExerciseListNotifier();
 });
+
+final currentExerciseCard = Provider<ExerciseCard>((ref) => throw UnimplementedError());
