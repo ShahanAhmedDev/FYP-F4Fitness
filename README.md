@@ -1,16 +1,91 @@
-# f_4_fitness
+# F4Fitness – Fitness & Health Android App
 
-A new Flutter Fitness App
+**Final Year Project (2021–2022)**
+By [Syed Ali Shanawar Jaffri](#) & [Muhammad Shahan Ahmed](#)
+Supervised by *Mr. Mohsin Raza Khan*
+Hamdard University – Faculty of Engineering Sciences and Technology
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📖 Overview
 
-A few resources to get you started if this is your first Flutter project:
+F4Fitness is a **mobile application** designed to help individuals improve their health and fitness with structured workout programs, exercise guides, history tracking, pose detection, and performance statistics. The app was developed as a **Final Year Project (FYP)** for the Bachelor of Science in Software Engineering program.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+The app provides beginner-friendly training guidance without requiring a personal trainer and can be used at home or in the gym.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## ✨ Features
+
+* **Workout Training Module** – Customize sets, reps, rest time, and duration.
+* **Exercise Library** – Preloaded exercises with text + GIF tutorials.
+* **History Tracking** – View past workouts and progress logs.
+* **Statistics Dashboard** – Track total time, number of exercises, and consecutive workout days.
+* **Pose Detection** – Integrated computer vision to check pose accuracy during workouts.
+* **Settings** – Customizable workout guide sounds and preferences.
+* **Notifications** – Reminders based on past workout patterns.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** Flutter (Dart)
+* **Backend & Auth:** Firebase Realtime Database
+* **Design Tools:** Figma, GIMP
+* **IDE:** Android Studio
+
+---
+
+## 📱 Screens & Modules
+
+* **Splash & Authentication:** Sign-up / Login
+* **Home Screen:** Quick access to training, exercises, stats, and history
+* **Training Module:** Start workouts with configurable parameters
+* **Exercise Module:** Visual + textual guides
+* **History Module:** Workout records with date/time logs
+* **Statistics Module:** Track progress with graphs and metrics
+* **Pose Detection Module:** ML-based posture accuracy estimation
+
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/F4Fitness.git
+   ```
+2. Open the project in **Android Studio**.
+3. Install dependencies using Flutter:
+
+   ```bash
+   flutter pub get
+   ```
+4. Connect your Firebase project (update `google-services.json`).
+5. Run on emulator or physical device:
+
+   ```bash
+   flutter run
+   ```
+
+---
+
+## 📈 Project Scope & Future Work
+
+* Expand the exercise library with more categories.
+* Improve pose detection accuracy with advanced ML models.
+* Add nutrition and meal planning modules.
+* Introduce social/community features for motivation.
+
+---
+
+## 🏅 Acknowledgements
+
+Special thanks to **Hamdard University** and **Engr. Mohsin Raza Khan** for guidance and support during this project.
+
+---
+
+## 📜 License
+
+This project was developed as an academic FYP and is shared publicly for learning and reference purposes.
+Feel free to fork, explore, and improve upon it.
