@@ -40,15 +40,15 @@ The app provides beginner-friendly training guidance without requiring a persona
 ## 📸 Screenshots
 
 ### Home & Exercise
-![Home Screen](assets/os_1.jpg)
-![Exercise Screen](assets/os_2.jpg)
+<img src="assets/os_1.jpg" alt="Home Screen" width="300"/>
+<img src="assets/os_2.jpg" alt="Exercise Screen" width="300"/>
 
 ### History & Statistics
-![History Screen](assets/os_3.jpg)
-![Statistics Screen](assets/os_4.jpg)
+<img src="assets/os_3.jpg" alt="History Screen" width="300"/>
+<img src="assets/os_4.jpg" alt="Statistics Screen" width="300"/>
 
 ### Pose Detection
-![Pose Detection Screen](assets/os_5.jpg)
+<img src="assets/os_5.jpg" alt="Pose Detection Screen" width="300"/>
 
 
 * **Splash & Authentication:** Sign-up / Login
